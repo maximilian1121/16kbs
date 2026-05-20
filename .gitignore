@@ -1,2 +1,19 @@
-dist
-.venv
+# build output
+dist/
+
+# virtual environment
+.venv/
+
+# python cache
+__pycache__/
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# logs
+*.log
+
+# packaging / build artifacts
+*.spec
+*.egg-info/
