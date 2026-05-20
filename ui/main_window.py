@@ -2,15 +2,14 @@ import os
 import shutil
 import mimetypes
 
-from PyQt6.QtWidgets import (
+from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QPushButton, QTextEdit, QProgressBar,
     QFileDialog, QMessageBox, QSlider, QCheckBox,
     QComboBox, QGroupBox, QSizePolicy,
 )
-from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QFont, QIcon
-import os
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont, QIcon
 
 from constants import (
     APP_NAME, APP_SUBTITLE,

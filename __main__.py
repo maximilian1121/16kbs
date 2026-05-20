@@ -2,8 +2,8 @@
 
 import sys
 
-from PyQt6.QtWidgets import QApplication, QMessageBox
-from PyQt6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtGui import QIcon
 import os
 
 from ffmpeg_utils import check_ffmpeg

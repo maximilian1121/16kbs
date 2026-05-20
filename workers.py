@@ -1,20 +1,20 @@
 import subprocess
 
-from PyQt6.QtCore import QThread, pyqtSignal
+from PySide6.QtCore import QThread, Signal
 
 from encoders import Encoder, detect_hw_encoders
 
 
 class EncoderProbeWorker(QThread):
-    done_signal = pyqtSignal(list)
+    done_signal = Signal(list)
 
     def run(self) -> None:
         self.done_signal.emit(detect_hw_encoders())
 
 
 class FFmpegWorker(QThread):
-    log_signal = pyqtSignal(str)
-    done_signal = pyqtSignal(int, str)
+    log_signal = Signal(str)
+    done_signal = Signal(int, str)
 
     def __init__(self, cmd: list[str], output_file: str) -> None:
         super().__init__()
