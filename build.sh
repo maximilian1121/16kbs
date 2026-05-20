@@ -46,7 +46,7 @@ log_step "Initializing build environment"
 command -v python3 >/dev/null 2>&1 || die "python3 not found"
 
 python3 -c "import nuitka" 2>/dev/null || die "Nuitka not installed"
-python3 -c "import PyQt6" 2>/dev/null || die "PyQt6 not installed"
+python3 -c "import PySide6" 2>/dev/null || die "PySide6 not installed"
 
 mkdir -p "$OUT_DIR"
 
@@ -75,7 +75,7 @@ log_step "Configuring compilation flags"
 NUITKA_FLAGS=(
     --onefile
     --standalone
-    --enable-plugin=pyqt6
+    --enable-plugin=pyside6
 
     --output-dir="$OUT_DIR"
     --output-filename="${APP_NAME}-${PLATFORM}-${VERSION}"
